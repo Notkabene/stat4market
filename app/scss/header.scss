@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 65px;
+
+  @include _1400  {
+    padding-top: 38px;
+  }
+  @include _1200 {
+    padding-top: 44px;
+    margin-bottom: 50px;
+  }
+  @include _767 {
+    padding-top: 35px;
+    margin-bottom: 32px;
+  }
+
+  &__logo {
+    margin-right: 47px;
+    @include _767  {
+      margin-right: 23px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__phone {
+    font-size: 24px;
+    padding-left: 36px;
+    position: relative;
+    margin-right: 30px;
+    @include _1400 {
+      font-size: 18px;
+      padding-left: 28px;
+    }
+    @include _1200  {
+      display: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/sprite.svg#icon-phone);
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @include _1400 {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__login {
+    font-size: 23px;
+    letter-spacing: 0.02em;
+    background-color: $pink;
+    color: #FFFFFF;
+    padding: 5px 32px 5px 70px;
+    position: relative;
+    border-radius: 12px;
+    transition: all 0.5s;
+    @include _1400 {
+      font-size: 18px;
+    }
+    @include _1200 {
+      font-size: 20px;
+    }
+    @include _767 {
+      font-size: 14px;
+      padding: 7px 22px 7px 40px;
+      border-radius: 6px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      background-image: url(../img/sprite.svg#icon-login);
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 32px;
+      @include _767 {
+        width: 13px;
+        height: 13px;
+        left: 20px;
+      }
+      
+    }
+  }
+  &__login:hover {
+    background-color: #a117a1;
+    @include _1200  {
+      background-color: $pink;
+    }
+  }
+
+  &__contacts {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include _1400 {
+      max-width: 420px;
+    }
+    @include _1200  {
+      max-width: 280px;
+    }
+  }
+}
+

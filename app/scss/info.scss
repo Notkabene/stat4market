@@ -1,0 +1,144 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 145px;
+  position: relative;
+
+  @include _1400  {
+    margin-bottom: 77px;
+  }
+
+  @include _1200  {
+    margin-bottom: 63px;
+  }
+
+  &__content {
+    width: 57%;
+    margin-right: 42px;
+    @include _1400  {
+      margin-right: 32px;
+    }
+
+    @include _1200  {
+      width: 100%;
+      margin-right: 26px;
+      margin-bottom: 65px;
+    }
+
+    @include _767  {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 1.43;
+    margin-bottom: 22px;
+    color: $title-color;
+
+    @include _1400  {
+      font-size: 46px;
+      margin-bottom: 44px;
+    }
+
+    @include _1200  {
+      margin-bottom: 18px;
+    }
+
+    @include _767  {
+      font-size: 26px;
+      line-height: 1.5;
+      max-width: 202px;
+      margin-bottom: 25px;
+    }
+
+    span {
+      color: $pink;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-bottom: 16px;
+    font-size: 28px;
+
+    @include _1400  {
+      margin-bottom: 40px;
+    }
+
+    @include _1200  {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 25px;
+  }
+
+  &__count {
+    font-size: 38px;
+    line-height: 1.45;
+    color: $pink;
+    font-weight: 700;
+  }
+
+  &__text {
+    @include _1200  {
+      max-width: 482px;
+    }
+  }
+
+  &__text p:not(:last-child) {
+    margin-bottom: 15px;
+    @include _767  {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    max-width: 620px;
+    padding: 0 30px 44px 30px;
+    position: relative;
+
+    @include _1400  {
+      max-width: 458px;
+      padding: 0 0 23px 23px;
+    }
+
+    @include _1200  {
+      position: absolute;
+      top: 150px;
+      right: -200px;
+    }
+
+    @include _767  {
+      max-width: 261px;
+      top: -45px;
+      right: -120px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../img/bg-stars.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      bottom: -13px;
+      left: 0;
+      z-index: -1;
+
+      @include _1400  {
+        bottom: 22px;
+      }
+      
+      @include _1200  {
+        display: none;
+      }
+    }
+  }
+}

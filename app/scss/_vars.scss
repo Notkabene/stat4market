@@ -1,0 +1,28 @@
+// Цвета
+$text-color: rgba(51, 26, 47, 0.8);
+$title-color: #331A2F;
+$pink: #CF51CE;
+
+// Медиазапросы
+@mixin font($font_name, $weight) {
+  font-family: $font_name, sans-serif;
+  font-weight: #{$weight};
+}
+
+@mixin _1400 {
+  @media (max-width: 1400px){
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media (max-width: 1200px){
+    @content;
+  }
+}
+
+@mixin _767 {
+  @media (max-width: 767px){
+    @content;
+  }
+}

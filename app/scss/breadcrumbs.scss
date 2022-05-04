@@ -1,0 +1,39 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 8px;
+
+  @include _767 {
+    margin-bottom: 44px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+    padding-right: 20px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 1px;
+      background-color: rgba(51, 26, 47, 0.5);
+      bottom: 14px;
+      right: 0;
+    }
+  }
+
+  &__item:not(:last-child):hover  .breadcrumbs__text {
+    color: $text-color;
+    @include _1200  {
+      color: inherit;
+    }
+  }
+  
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(51, 26, 47, 0.5);
+    transition: color 0.5s;
+  }
+}

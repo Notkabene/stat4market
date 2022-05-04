@@ -1,0 +1,152 @@
+.benefits {
+  margin-bottom: 160px;
+
+  @include _1400 {
+    margin-bottom: 120px;
+  }
+
+  @include _1200 {
+    margin-bottom: 85px;
+  }
+
+  @include _767 {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    max-width: 680px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    @include _1400 {
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+
+    @include _1200 {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 846px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+
+    @include _1400 {
+      max-width: 684px;
+      font-size: 20px;
+    }
+
+    @include _1200 {
+      margin-bottom: 80px;
+    }
+
+    @include _767 {
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+    justify-content: space-between;
+
+    @include _1400  {
+      grid-template-columns: repeat(4, 258px);
+    }
+
+    @include _1200  {
+      justify-content: center;
+      grid-template-columns: repeat(2, 255px);
+      gap: 60px;
+    }
+
+    @include _767  {
+      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+  }
+
+  
+
+  &__item {
+    @include _1400  {
+      max-width: 225px;
+    }
+
+    @include _1200  {
+      max-width: 255px;
+    }
+
+    @include _767  {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 4px 25px rgba(234, 93, 187, 0.25);
+    border-radius: 15px;
+    background-color: $pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include _1400 {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    @include _767 {
+      margin: 0 auto 20px;
+    }
+
+    svg {
+      width: 48px;
+      height: 48px;
+      
+      @include _1400 {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    
+  }
+
+  &__name {
+    color: $title-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+
+    @include _1400  {
+      font-size: 20px;
+    }
+
+    @include _767  {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    
+    @include _1400  {
+      font-size: 16px;
+    }
+  }
+
+  
+}
